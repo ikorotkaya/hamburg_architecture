@@ -1,0 +1,102 @@
+// @import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // font-family: "Sora", sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-display: swap;
+  color: #06091d;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+// app
+
+.app {
+  margin: 0 auto;
+  max-width: 1200px;
+
+
+}
+
+// navbar
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  
+  background-color: rgb(234, 233, 233);
+  height: 2rem;
+
+}
+
+.link {
+  text-decoration: none;
+  color: #06091d;
+  font-size: 1.5rem;
+}
+
+.link:not(:last-child) {
+  margin-right: 0.5rem;
+
+}
+
+// header
+
+.header {
+  text-align: center;
+}
+
+// projects gallery
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+  
+  &__project {
+    text-align: center;
+
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    
+  }
+}
+
+// footer
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  
+  background-color: #3d3d3d;
+  color: #fff;
+}

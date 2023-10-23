@@ -1,10 +1,18 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import ProjectsGallery from "./components/ProjectsGallery";
+import Footer from "./components/Footer";
 
 export default function App() {
 	return (
-		<div className="App">
-			<h1>Hamburg Architecture map!</h1>
+		<div className="app">
+			<Navbar />
+			<Header />
+			<ProjectsGallery />
+			<Footer />
 		</div>
       
 	);
