@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMapProps } from "../types";
 
 const containerStyle = {
   width: "800px",
@@ -13,7 +14,7 @@ const center = {
 
 console.log(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
 
-export default function GoogleMapsComponent() {
+export default function GoogleMapsComponent({projects}: GoogleMapProps) {
   return (
     <div className="google-map">
       <LoadScript
