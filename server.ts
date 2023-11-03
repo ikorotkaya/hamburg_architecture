@@ -1,6 +1,7 @@
 import express from "express";
 import { Pool } from "pg";
 import dotenv from "dotenv";
+import cors from "cors";
 dotenv.config();
 
 const app = express();
@@ -16,6 +17,8 @@ const pool = new Pool({
 
 pool.connect();
 
+app.use(cors({ origin: "http://localhost:3000" }));
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
@@ -27,8 +30,7 @@ app.get("/projects", async (req, res) => {
     const result = await client.query("SELECT * FROM projects");
     const data = result.rows;
     client.release();
-    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.json(data); 
+    res.json(data);
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).json({ error: "Internal server error" });
