@@ -14,3 +14,7 @@ export type ProjectsProps = {
 export type GoogleMapProps = {
   projects: ProjectProps[];
 };
+
+export type SidebarProps = {
+  projects: ProjectProps[];
+};

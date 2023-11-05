@@ -3,10 +3,7 @@ import "./App.scss";
 
 import axios from "axios";
 
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
 import GoogleMapsComponent from "./components/GoogleMap";
 
 export default function App() {
@@ -28,11 +25,10 @@ useEffect(() => {
 
 return (
 	<div className="app">
-		<Navbar />
-		<Header />
-		<Projects projects={projects} />
-		<GoogleMapsComponent projects={projects} />
-		<Footer />
+		<div className="app__inner">
+			<Header />
+			<GoogleMapsComponent projects={projects} />
+		</div>
 	</div>
 );
 }
