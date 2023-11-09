@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
+import pin from "../images/pin.svg";
 
 import { GoogleMapsComponentProps } from "../types";
 const containerStyle = {
@@ -30,6 +31,12 @@ export default function GoogleMapsComponent({
               key={index}
               position={{ lat: Number(project.lat), lng: Number(project.lng) }}
               title={project.title}
+              options={{
+                icon: {
+                  url: pin,
+                  scaledSize: new window.google.maps.Size(15, 15),
+                },
+              }}
             />
           ))}
         </GoogleMap>
