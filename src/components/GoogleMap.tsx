@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 
+import { GoogleMapsComponentProps } from "../types";
 const containerStyle = {
   width: "100%",
   height: "100%",
@@ -11,40 +12,9 @@ const center = {
   lng: 9.9872,
 };
 
-export default function GoogleMapsComponent() {
-  const exampleProject = {
-    id: 1,
-    title: "Example Project",
-    description: "This is an example project.",
-    address: "Hofdurchgang Steinschanze 2–4",
-    city: "Hamburg",
-    country: "Germany",
-  };
-
-  const [map, setMap] = useState<any>(null);
-  const [projectLatLng, setProjectLatLng] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
-
-  useEffect(() => {
-    if (map && exampleProject) {
-      const geocoder = new window.google.maps.Geocoder();
-
-      geocoder.geocode(
-        { address: exampleProject.address },
-        (results, status) => {
-          if (status === "OK" && results && results.length > 0) {
-            const { lat, lng } = results[0].geometry.location;
-            setProjectLatLng({ lat: lat(), lng: lng() });
-          } else {
-            console.error("Geocoding failed:", status);
-          }
-        }
-      );
-    }
-  }, [map, exampleProject]);
-
+export default function GoogleMapsComponent({
+  projects,
+}: GoogleMapsComponentProps) {
   return (
     <div className="map_container">
       <LoadScript
@@ -54,19 +24,14 @@ export default function GoogleMapsComponent() {
             : ""
         }
       >
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={11}
-          onLoad={(map) => setMap(map)}
-        >
-          {projectLatLng && (
-            <Marker
-              position={projectLatLng}
-              title={exampleProject.title}
-              label="Yo"
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={11}>
+          {projects && projects.map((project, index) => (
+            <MarkerF
+              key={index}
+              position={{ lat: Number(project.lat), lng: Number(project.lng) }}
+              title={project.title}
             />
-          )}
+          ))}
         </GoogleMap>
       </LoadScript>
     </div>

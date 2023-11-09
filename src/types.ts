@@ -5,13 +5,15 @@ export type ProjectProps = {
   district: string;
   address: string;
   architect: string;
+  lat: number;
+  lng: number;
 };
 
 export type ProjectsProps = {
   projects: ProjectProps[];
 };
 
-export type GoogleMapProps = {
+export type GoogleMapsComponentProps = {
   projects: ProjectProps[];
 };
 
