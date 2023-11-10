@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  MarkerF,
+  InfoWindowF,
+} from "@react-google-maps/api";
 import pin from "../images/pin.svg";
 
 import { GoogleMapsComponentProps } from "../types";
-import Sidebar from "./Sidebar";
+import ProjectPopUp from "./ProjectPopUp";
+
 const containerStyle = {
   width: "100%",
   height: "100%",
@@ -26,10 +32,10 @@ export default function GoogleMapsComponent({
   projects,
 }: GoogleMapsComponentProps) {
   const [isGoogleMapsLoaded, setIsGoogleMapsLoaded] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(null);
 
-  const handleMarkerClick = () => {
-    setIsSidebarOpen(true);
+  const handleMarkerClick = (projectId: number | null) => {
+    setSelectedProjectId(projectId);
   };
 
   const handleGoogleMapsLoad = () => {
@@ -49,7 +55,6 @@ export default function GoogleMapsComponent({
           mapContainerStyle={containerStyle}
           center={center}
           options={googleMapOptions}
-
           onLoad={handleGoogleMapsLoad}
           zoom={11}
         >
@@ -68,11 +73,23 @@ export default function GoogleMapsComponent({
                     scaledSize: new window.google.maps.Size(15, 15),
                   },
                 }}
-                onClick={handleMarkerClick}
-              />
+                onClick={() => handleMarkerClick(project.id)}
+              >
+                {selectedProjectId === project.id && (
+                  <InfoWindowF
+                    position={{
+                      lat: Number(project.lat),
+                      lng: Number(project.lng),
+                    }}
+                    onCloseClick={() => handleMarkerClick(null)}
+                    options={{ disableAutoPan: false }}
+                  >
+                    <ProjectPopUp project={project} />
+                  </InfoWindowF>
+                )}
+              </MarkerF>
             ))}
         </GoogleMap>
-        {isSidebarOpen && <Sidebar projects={projects} />}
       </LoadScript>
     </div>
   );

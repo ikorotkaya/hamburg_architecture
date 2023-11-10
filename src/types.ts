@@ -20,3 +20,7 @@ export type GoogleMapsComponentProps = {
 export type SidebarProps = {
   projects: ProjectProps[];
 };
+
+export type ProjectPopUpProps = {
+  project: ProjectProps;
+};
