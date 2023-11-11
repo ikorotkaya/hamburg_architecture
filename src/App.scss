@@ -102,4 +102,9 @@ html,
     font-weight: 400;
     margin: 0.5rem 0;
   }
+
+  &__buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
 }
