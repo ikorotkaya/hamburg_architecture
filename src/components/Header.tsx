@@ -8,14 +8,8 @@ export default function Header() {
         <img src={logo} alt="logo" />
       </div>
       <div className="header_container__title">
-        <h1>Hamburg Architecture</h1>
+        Hamburg Architecture
       </div>
-      <div className="header_container__links">
-        <a className="header_container__link" href="/">Map</a>
-        <a className="header_container__link" href="/">About</a>
-        <a className="header_container__link" href="/">Contact</a>
-      </div>
-
     </div>
   );
 }

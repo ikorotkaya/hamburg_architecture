@@ -46,12 +46,21 @@ html,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 50px;
 
-  background-color: rgb(234, 233, 233);
+  border-bottom: 4px solid #ffc857;
+
+  background-color: #405a74;
 
   &__logo img {
     width: 100px;
+  }
+
+  &__title {
+    color: #ffc857;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 
   &__links {
