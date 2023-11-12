@@ -6,7 +6,7 @@ export default function ProjectPopUp({ project }: ProjectPopUpProps) {
     <div className="project-popup">
       <img
         className="project-popup__project-image"
-        src="https://via.placeholder.com/150"
+        src={`images/${project.id}.webp`}
         alt="image"
       />
       <h2 className="project-popup__project-title">{project.title}</h2>
