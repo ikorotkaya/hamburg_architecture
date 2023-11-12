@@ -1028,10 +1028,10 @@ const rawProjects = [
     lng: 9.9580558,
   },
   {
-    district: "St. Pauli \nKlubhaus St. Pauli",
-    title:
+    district: "St. Pauli",
+    title: "Klubhaus St. Pauli",
+    description:
       "Das Klubhaus St. Pauli verfolgt das Ziel, das Livemusik angebot auf der Reeperbahn zu ergänzen und mit seinenvielfältigen kulturellen Nutzungen die Ausgehmeile für deren Besucher noch attraktiver zu gestalten. Die Fassadedes Klubhauses wurde entworfen unter der Prämisse, die Integration von Medien in die Architektur neu zu denken. Eigens konzipierte Metallgittermodule, mit LED-Technikbestückt, sind in unterschiedlichen Ebenen vor der eigent lichen Gebäudehaut angeordnet und generieren eine dreidimensionale Topografie.",
-    description: "Architekten: akyol kamps : bbp architekten BDA",
     address: "Spielbudenplatz 20-24, direkt am Eingang des Klubhauses, Hamburg",
     id: 88,
     lat: 53.5492357,

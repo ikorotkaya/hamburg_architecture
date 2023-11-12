@@ -12,6 +12,9 @@ export default function ProjectPopUp({ project }: ProjectPopUpProps) {
       <h2 className="project-popup__project-title">{project.title}</h2>
       <p className="project-popup__project-architect">
         Architect: {project.architect}
+      <p className="project-popup__project-description">
+        {project.description}
+      </p>
       </p>
     </div>
   );
