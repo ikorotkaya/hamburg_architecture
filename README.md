@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Hamburg Architectur Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a map of Hamburg with all the buildings that are part of the "Tag der Architektur" since 2014.
 
-## Available Scripts
+![Hamburg Architecture Map](https://user-images.githubusercontent.com/91027118/282439104-ba515255-d459-4f40-adfb-b4bcc3131b78.png) 
 
-In the project directory, you can run:
+![GitHub License MIT](https://img.shields.io/github/license/sqlhabit/sql_schema_visualizer?color=%2347A3F3)
 
-### `npm start`
+## How to use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use the map to navigate through the architectural wonders of Hamburg's Day of Architecture provided by the [Architekten- und Ingenieurkammer Hamburg](https://www.akhh.de/). The collection includes projects developed since 2013, as well as iconic structures from the city's earlier years. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Click on a building for detailed information and a handy button that links to the Google Maps route planner for easy navigation.
 
-### `npm test`
+![Hamburg Architecture Map](https://user-images.githubusercontent.com/91027118/282439895-df184874-cfec-4f4c-bbb7-6b15db97c119.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How it works
 
-### `npm run build`
+🔑 *Important Note:* To ensure that you have access to accurate pricing details, please make sure you have correctly configured your Google Maps API key. Detailed instructions on how to obtain and configure your API key can be found in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🏠 The project will be updated with new buildings every year after the "Tag der Architektur" in Hamburg. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- TypeScript
+- Google Maps API + Maps JavaScript API
+- HTML
+- CSS
 
-### `npm run eject`
+## Development
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To get started with development, follow these steps:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Install dependencies:
+```sh
+npm install
+```
+2. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm run start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You can access the application at [localhost:3000](http://localhost:3000/)
 
-## Learn More
+## Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The data is provided by the [Architekten- und Ingenieurkammer Hamburg](https://www.akhh.de/).
+You can find all the programm pdfs [here](https://www.akhh.de/baukultur/info-tag-der-architektur/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All image rigths belong to the Architekten- und Ingenieurkammer Hamburg and being downloaded from their programm pdfs.
+
+## Contributions
+
+Contributions to the Miles Experiences app are welcome! If you have any suggestions, bug reports, or feature requests, feel free to submit an issue or a pull request. 👋🏼
+
+## Licence
+
+This project is released under the MIT Licence. Feel free to use, modify, and redistribute the code under the terms of the licence.
