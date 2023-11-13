@@ -1,14 +1,18 @@
 # Hamburg Architectur Map
 
-This is a map of Hamburg with all the buildings that are part of the "Tag der Architektur" since 2014.
+This map shows all modern buildings in Hamburg that have been included in the "Tag der Architektur" event since 2014. Use the map to explore and discover interesting architectural landmarks.
 
 ![Hamburg Architecture Map](https://user-images.githubusercontent.com/91027118/282439104-ba515255-d459-4f40-adfb-b4bcc3131b78.png) 
 
 ![GitHub License MIT](https://img.shields.io/github/license/sqlhabit/sql_schema_visualizer?color=%2347A3F3)
 
+🎯 *Creating a map of contemporary structures built in Hamburg since 2014 was the main goal of the project. If you feel you have seen everything Hamburg has to offer, this map could be advantageous in uncovering more of the city's architectural treasures!*
+
+💡 *Brief explanations of the projects featured provide an overview of the buildings. This may be of interest to architects looking for a fresh perspective on the city. It is also an excellent opportunity to learn about the firms and architects who were involved in these projects.*
+
 ## How to use
 
-Use the map to navigate through the architectural wonders of Hamburg's Day of Architecture provided by the [Architekten- und Ingenieurkammer Hamburg](https://www.akhh.de/). The collection includes projects developed since 2013, as well as iconic structures from the city's earlier years. 
+Use the map to navigate through the architectural wonders of Hamburg's Day of Architecture provided by the [Architekten- und Ingenieurkammer Hamburg](https://www.akhh.de/). The collection includes projects developed since 2014, as well as some iconic structures from the city's earlier years. 
 
 Click on a building for detailed information and a handy button that links to the Google Maps route planner for easy navigation.
 
@@ -18,7 +22,7 @@ Click on a building for detailed information and a handy button that links to th
 
 🔑 *Important Note:* To ensure that you have access to accurate pricing details, please make sure you have correctly configured your Google Maps API key. Detailed instructions on how to obtain and configure your API key can be found in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-🏠 The project will be updated with new buildings every year after the "Tag der Architektur" in Hamburg. 
+🏠 This project will have new buildings added every year after the "Tag der Architektur" event in Hamburg. 
 
 ## Technologies Used
 
