@@ -1,14 +1,15 @@
 import React from "react";
+import { ProjectsProps, ProjectProps } from "../types";
 
-export default function Projects() {
+export default function Projects({projects}: ProjectsProps) {
   return (
-    <div className="projects">
-      <div className="projects__project">project 1</div>
-      <div className="projects__project">project 2</div>
-      <div className="projects__project">project 3</div>
-      <div className="projects__project">project 4</div>
-      <div className="projects__project">project 5</div>
-      <div className="projects__project">project 6</div>
-    </div>
+    <>
+      {projects.map((project: ProjectProps) => (
+        <div key={project.id}>
+          <p>{project.id}</p>
+          <p>{project.description}</p>
+        </div>
+      ))}
+    </>
   );
 }

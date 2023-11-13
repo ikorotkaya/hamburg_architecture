@@ -1,5 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap");
 
 html {
   box-sizing: border-box;
@@ -13,8 +12,7 @@ html {
 
 body {
   margin: 0;
-  // font-family: "Sora", sans-serif;
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   font-display: swap;
   color: #06091d;
 }
@@ -30,73 +28,119 @@ html,
 
 .app {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 100%;
+  height: 100%;
 
-
-}
-
-// navbar
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  
-  background-color: rgb(234, 233, 233);
-  height: 2rem;
-
-}
-
-.link {
-  text-decoration: none;
-  color: #06091d;
-  font-size: 1.5rem;
-}
-
-.link:not(:last-child) {
-  margin-right: 0.5rem;
-
+  &__inner {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+  }
 }
 
 // header
 
-.header {
-  text-align: center;
-}
+.header_container {
+  grid-row-start: 1;
 
-// projects gallery
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  padding: 1rem;
-  
-  &__project {
-    text-align: center;
+  border-bottom: 4px solid #00a9a5;
 
-    height: 300px;
+  background-color: #092327;
 
+  &__logo img {
+    width: 100px;
+  }
+
+  &__title {
+    color: #00a9a5;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+
+  &__links {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-    
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #06091d;
+    font-size: 1.5rem;
   }
 }
 
-// footer
+// google map
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2rem;
-  
-  background-color: #3d3d3d;
-  color: #fff;
+.map_container {
+  grid-row-start: 2;
+  position: relative;
+}
+
+// project popup
+
+.project-popup {
+  width: 250px;
+  height: 350px;
+
+  &__project-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+  }
+
+  &__project-title {
+    font-weight: 600;
+    margin: 0.5rem 0;
+    align-content: center;
+  }
+
+  &___project-architect {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+  }
+
+  &__google-maps-button {
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #00a9a5;
+    color: #092327;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__google-maps-button:hover {
+    background-color: #00a9a5;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    &__inner {
+      grid-template-rows: 80px 1fr;
+    }
+  }
+
+  .header_container {
+    padding: 20px 20px;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .project-popup {
+    width: 200px;
+    height: 300px;
+  }
 }
