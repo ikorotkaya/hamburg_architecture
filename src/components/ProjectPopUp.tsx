@@ -1,7 +1,9 @@
 import React from "react";
 import { ProjectPopUpProps } from "../types";
+import { useTranslation } from "react-i18next";
 
-export default function ProjectPopUp({ project }: ProjectPopUpProps) {
+export default function ProjectPopUp({ project, locale }: ProjectPopUpProps) {
+  const { t } = useTranslation();
 
   const openGoogleMaps = () => {
     const mapsUrl = `https://www.google.com/maps?q=${project.lat},${project.lng}`;
@@ -17,7 +19,7 @@ export default function ProjectPopUp({ project }: ProjectPopUpProps) {
       />
       <h2 className="project-popup__project-title">{project.title}</h2>
       <p className="project-popup__project-architect">
-      <strong>Architect:</strong> {project.architect}
+      <strong>{t("architect")}:</strong> {project.architect}
       </p>
       <p className="project-popup__project-description">
         {project.description}

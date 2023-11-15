@@ -19,4 +19,19 @@ export type SidebarProps = {
 
 export type ProjectPopUpProps = {
   project: ProjectProps;
+  locale: string;
+};
+
+export type GoogleMapsComponentProps = {
+  projects: ProjectProps[];
+  locale: string;
+};
+
+export type LanguageSwitcherProps = {
+  language: string;
+  setLanguage: (language: string) => void;
+};
+
+export type LanguageDropDownMenuProps = {
+  setMenuOpen: (open: boolean) => void;
 };

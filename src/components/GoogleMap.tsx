@@ -7,13 +7,11 @@ import {
 } from "@react-google-maps/api";
 import Supercluster, { ClusterFeature, PointFeature } from "supercluster";
 
-import rawProjects from "../data/final_projects.js";
-
 import pin from "../images/pin.svg";
 import clusterPinIcon from "../images/cluster-pin-icon.svg";
 import pinActiveIcon from "../images/pin-active-icon.svg";
 
-import { ProjectProps } from "../types";
+import { GoogleMapsComponentProps, ProjectProps } from "../types";
 import ProjectPopUp from "./ProjectPopUp";
 
 const containerStyle = {
@@ -41,13 +39,11 @@ type ProjectCluster = ClusterFeature<{ project: ProjectProps }> & {
   properties: { project: ProjectProps };
 };
 
-export default function GoogleMapsComponent() {
+export default function GoogleMapsComponent({locale, projects}: GoogleMapsComponentProps) {
   const [isGoogleMapsLoaded, setIsGoogleMapsLoaded] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
-
-  const [projects, setProjects] = useState<ProjectProps[]>([]);
 
   const mapRef = useRef<Map>();
   const [zoom, setZoom] = useState<number>(12);
@@ -126,11 +122,6 @@ export default function GoogleMapsComponent() {
       properties: { cluster: false, project },
     }));
   };
-
-  useEffect(() => {
-    setProjects(rawProjects);
-  }
-  , []);
 
   useEffect(() => {
     const radius = (100 * googleMapOptions.maxZoom) / zoom;
@@ -234,7 +225,7 @@ export default function GoogleMapsComponent() {
                       onCloseClick={() => handleMarkerClick(null)}
                       options={{ disableAutoPan: false }}
                     >
-                      <ProjectPopUp project={properties.project} />
+                      <ProjectPopUp project={properties.project} locale={locale} />
                     </InfoWindowF>
                   )}
                 </MarkerF>

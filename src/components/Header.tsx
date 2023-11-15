@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../logo.svg";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   return (
@@ -10,6 +11,7 @@ export default function Header() {
       <div className="header_container__title">
         Hamburg Architecture
       </div>
+      <LanguageSwitcher  />
     </div>
   );
 }

@@ -63,16 +63,54 @@ html,
     font-weight: bolder;
   }
 
-  &__links {
+  &__language-switcher {
     display: flex;
+    position: relative;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.language-icon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.language-menu-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  z-index: 10;
+  top: 40px;
+  right: 0;
+  width: 100px;
+
+  border: 4px solid #00a9a5;
+  border-radius: 10px;
+  background-color: white;
+
+  cursor: pointer;
+
+  &__language {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
   }
 
-  &__link {
-    text-decoration: none;
-    color: #06091d;
-    font-size: 1.5rem;
+  &__language:hover {
+    background-color: #00a9a5;
+    color: white;
+
   }
 }
 
