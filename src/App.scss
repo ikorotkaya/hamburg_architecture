@@ -175,8 +175,17 @@ html,
     padding: 20px 20px;
 
     &__title {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
+
+    &__logo img {
+      width: 70px;
+    }
+  }
+
+  .language-icon img {
+    width: 20px;
+    height: 20px;
   }
 
   .project-popup {
