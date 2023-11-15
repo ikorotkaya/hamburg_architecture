@@ -1,7 +1,13 @@
 export type ProjectProps = {
   id: number;
-  title: string;
-  description: string;
+  title: {
+    en: string;
+    de: string;
+  };
+  description: {
+    en: string;
+    de: string;
+  };
   district: string;
   address: string;
   architect?: string;
