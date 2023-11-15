@@ -57,6 +57,8 @@ html,
   }
 
   &__title {
+    padding: 0;
+    margin: 0;
     color: #00a9a5;
     font-size: 2rem;
     text-transform: uppercase;
@@ -72,8 +74,8 @@ html,
 }
 
 .language-icon img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 

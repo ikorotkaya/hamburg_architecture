@@ -2,5 +2,6 @@
   "de": "Deutsch",
   "en": "English",
   "architect": "Architect",
-  "imageLink": "/images/english.svg"
+  "imageLink": "/images/english.svg",
+  "directions": "Get Directions"
 }

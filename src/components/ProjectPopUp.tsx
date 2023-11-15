@@ -33,7 +33,7 @@ export default function ProjectPopUp({ project, locale }: ProjectPopUpProps) {
         className="project-popup__google-maps-button"
         onClick={openGoogleMaps}
       >
-        Get directions
+        {t("directions")}
       </div>
     </div>
   );

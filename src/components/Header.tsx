@@ -8,9 +8,9 @@ export default function Header() {
       <div className="header_container__logo">
         <img src={logo} alt="logo" />
       </div>
-      <div className="header_container__title">
+      <p className="header_container__title">
         Hamburg Architecture
-      </div>
+      </p>
       <LanguageSwitcher  />
     </div>
   );
