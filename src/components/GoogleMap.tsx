@@ -201,7 +201,6 @@ export default function GoogleMapsComponent({locale, projects}: GoogleMapsCompon
                     lat: Number(properties.project.lat),
                     lng: Number(properties.project.lng),
                   }}
-                  title={properties.project.title}
                   options={{
                     icon: {
                       url:
