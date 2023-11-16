@@ -71,7 +71,7 @@ All image rigths belong to the Architekten- und Ingenieurkammer Hamburg and bein
 
 ## Contributions
 
-Contributions to the Miles Experiences app are welcome! If you have any suggestions, bug reports, or feature requests, feel free to submit an issue or a pull request. 👋🏼
+Contributions to the Hamburg Architecture app are welcome! If you have any suggestions, bug reports, or feature requests, feel free to submit an issue or a pull request. 👋🏼
 
 ## Licence
 
