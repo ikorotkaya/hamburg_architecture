@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import "./i18n";
 
 export default function App() {
+	// Design note: 1_add_new_language.md 
 	const { i18n } = useTranslation();
 	const [locale, setLocale] = useState<string>("de");
 	const [projects, setProjects] = useState<ProjectProps[]>([]);

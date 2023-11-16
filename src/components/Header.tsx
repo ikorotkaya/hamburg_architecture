@@ -10,9 +10,9 @@ export default function Header() {
       <div className="header_container__logo">
         <img src={logo} alt="logo" />
       </div>
-      <p className="header_container__title">
-      {t("title")}
-      </p>
+      <div className="header_container__title">
+      <p>{t("title")}</p>
+      </div>
       <LanguageSwitcher  />
     </div>
   );

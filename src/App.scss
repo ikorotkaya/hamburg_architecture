@@ -49,14 +49,21 @@ html,
   padding: 20px 50px;
 
   border-bottom: 4px solid #00a9a5;
-
   background-color: #092327;
 
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__logo img {
-    width: 100px;
+    width: 5rem;
   }
 
   &__title {
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     color: #00a9a5;
@@ -65,12 +72,24 @@ html,
     font-weight: bolder;
   }
 
+  &__title p {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+
   &__language-switcher {
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
   }
+}
+
+.language-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language-icon img {
@@ -173,9 +192,15 @@ html,
 
   .header_container {
     padding: 20px 20px;
+    gap: 30px;
 
     &__title {
       font-size: 1.3rem;
+    }
+
+    &__title p {
+      margin: 0;
+      padding: 0;
     }
 
     &__logo img {
