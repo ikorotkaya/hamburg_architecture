@@ -1,18 +1,14 @@
 # Hamburg Architectur Map
 
-This map shows all modern buildings in Hamburg that have been included in the "Tag der Architektur" event since 2014. Use the map to explore and discover interesting architectural landmarks.
+Interactive map showing new buildings in Hamburg presented in the "Tag der Architektur" event from 2014 onwards. 
+
+The latest release features two languages (EN, DE).
 
 ![Hamburg Architecture Map](https://user-images.githubusercontent.com/91027118/283475503-d3528cdc-1970-4d92-9b00-8343d0f6af6a.png) 
 
 ![GitHub License MIT](https://img.shields.io/github/license/sqlhabit/sql_schema_visualizer?color=%2347A3F3)
 
-🎯 *The aim of this project was to create a map of the modern buildings built in Hamburg after 2014. If you believe you've explored all Hamburg has to provide, this map could assist you in discovering additional architectural wonders of the city!*
-
-💡 *Brief explanations of the projects featured provide an overview of the buildings. This may be of interest to architects looking for a fresh perspective on the city. It is also an excellent opportunity to learn about the firms and architects who were involved in these projects.*
-
 ## How to use
-
-Use the map to navigate through the architectural projects of Hamburg's Day of Architecture provided by the [Architekten- und Ingenieurkammer Hamburg](https://www.akhh.de/). The collection includes projects developed since 2014, as well as some iconic structures from the city's earlier years. 
 
 Click on a building for detailed information and a handy button that links to the Google Maps route planner for easy navigation.
 
@@ -20,19 +16,20 @@ Click on a building for detailed information and a handy button that links to th
 
 ## How it works
 
-🔑 *Important Note:* Please make sure you have set up your Google Maps API key correctly to access Google Maps. You can find detailed instructions on obtaining and configuring your API key in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
+🔑 Please make sure you have set up your Google Maps API key correctly to access Google Maps. You can find detailed instructions on obtaining and configuring your API key in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
 🏠 New buildings will be added to this project every year after the "Tag der Architektur" event in Hamburg.
 
-🔎 All project information was taken from PDF files provided by the Architekten- und Ingenieurkammer Hamburg using a JavaScript script. The script is available in a separate repository named [Web scraper on Github](https://github.com/ikorotkaya/web_scraper), where you can find instructions on how to use it, connect the app to the database using ORM Sequalize and store data in a PostgreSQL database.
+🔎 Project info sourced from website and PDFs via a JavaScript script. Access the [Hamburg Architecture Data Scraper](https://github.com/ikorotkaya/web_scraper) for usage instructions, including connecting the app to a PostgreSQL database using ORM Sequelize.
 
-🗣️ The app has two languages: English and German. To change the language, click on the language button in the top-right corner. The title and description of the project will be translated. Translations are facilitated by the i18next package. Design Note 1 has thorough instructions for adding new languages.
+🗣️ Switch between English and German using the language button in the top-right corner. Project titles and descriptions are translated using the i18next package.
 
 Optional:
 
-🌐 You can connect the app to a server and obtain the details of the projects from the database. This enables you to add new projects to the map without requiring to redeploy the app. Express.js is used to create the server, which uses PostgreSQL as its database. You'll discover the server code in the *server.ts* document found in the root directory. 
+🌐 Connect the app to a server for dynamic project updates. The server, built with Express.js and PostgreSQL, allows adding projects to the map without redeploying the app. Check *server.ts* in the root directory for the server code.
 
-❗️ Ensure your confidential data is stored in the env file. Use dotenv to access your private information for server-to-database connectivity. You can find detailed instructions on how to set up your server in the [Express.js documentation](https://expressjs.com/en/starter/installing.html).
+❗️ Secure your confidential data in the env file using dotenv for server-to-database connectivity. Refer to the [Express.js documentation](https://expressjs.com/en/starter/installing.html) for setup details.
+
 
 ## Technologies Used
 
